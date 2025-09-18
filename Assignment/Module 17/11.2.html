@@ -1,0 +1,33 @@
+<!-- Create a digital clock that updates every second using setInterval(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        background-color: black;
+        color: red;
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock"></div>
+    <script>
+      function updateClock() {
+        let now = new Date();
+        document.getElementById("clock").textContent = now.toLocaleTimeString();
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+  </body>
+</html>
